@@ -1,0 +1,115 @@
+A tool that is maintaining multiple versioning of our file is called version control system (vcs). It helps us to track changes in file.
+
+WHAT IS VERSION CONTROL SYSTEM? 
+- about managing multiple versions of 
+  document , programs , websites etc.
+- track history of collection of files
+- version control software keeps track of every modification to the code in speical kind of database.
+
+TYPES OF VERSION CONTROL SYSTEM 
+- localized vcs : A localized version control system keeps local copies of the files.
+- centralized vcs : In centralized source control , there is a server and a client. The server is the master repository which contains
+  all of the versions of the code. 
+- distributed version control system : In a distributed version control system each other has a complete local copy of a repository
+  on his individual machine.
+ 
+WHAT is GIT ?
+- git is distributed vesion control system.[DVCS]
+- git is a tree history storage system.
+- git is content tracking management system. 
+
+GIT PROVIDES- ease(simple to use tools and commands. cloud base remote repository.
+- speed( support for non-linear development
+- fully distributed
+- able to handle large projects
+
+GIT CREATED By- Linus Torvalds in 2005
+
+[[ cat .git/config
+
+***********************************************LOCAL REPOSITORY SETUP **********************************************************************
+
+1. Set the name and email for git to use when you commit:
+-  git config --global user.name "chanchal"
+-  git config --global user.email "chanchal.gmail.com"
+-  git config --global --list 
+
+2. Create Directory
+-   mkdir dir1
+
+3. Initialize dir with
+-  git init  (to make dir into repository) local w/s
+   git alwys track file not directory
+
+4. Create text file 
+-  git add . (to brought all files into staging area)Staging
+-  git commit (local commit)
+-  git status (to check the file tracking)
+
+************************************************ REMOTE REPOSITORY***************************************************************************
+ 
+1. Create remote repository on :
+    github, bitbucket, codecommit etc.
+
+2. Clone repo to local
+-   git clone URL
+
+3. Local to remote integration
+-  cd to local repo
+-  git remote add origin
+   ssh://git@github.com/[username]/[repository-name].git
+- git push
+- git pull (to fetch running changes/ latest)
+- git push --all origin (to push entire data)
+
+TO MODIFY BRANCH ] - git branch -m (name)
+- git log               (to show deep details of git]
+- git log --oneline (to get commit id)
+- git show [id]      (to check file changes)
+
+**************************************************BRANCHES IN GIT*******************************************************************************
+
+- git branch -c [name] (to create new branch)
+- git branch -a (to list all branches)
+- git checkout [branch name] / git checkout [branch name] (to switch into another branch)
+ 
+*****REMOVING FILE*******
+- git rm [filename] (to remove file and rollback to staging area)
+- git mv [filename]/[newfile name]
+
+******IGNORE FILE************
+- vim .gitignore 
+- *.(extn)
+
+******MERGING************
+- git merge (branch name to merge)
+
+********CLONE REMOTE TO LOCAL*************
+- git clone (url from github)
+
+
+*****************************************************ROLLBACK****************************************************************************
+
+****LOCAL W/S
+- git diff (to show you diff/change in file) 
+- git checkout [filename] (to rollback into prev. file content before staging)  
+
+****STAGING W/S
+- git diff --cached (its check the diff in file which was staged)
+- git restore --staged [filename] (to rollback into previous stage)
+
+****COMMIT W/S
+- git diff [previous commit/current commit]
+- git revert HEAD (to rollback the content)
+
+*****RESET HISTORY
+- git reset --hard [commit ID]  (from where to reset)
+
+****************************************************GIT SSH LOGIN***************************************************************************
+
+- ssh-keygen.exe
+- cat .ssh/id_rsa.pub (copy the public key )
+
+
+
+
