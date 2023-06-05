@@ -1,3 +1,4 @@
 this is feature 1
 this is new feature
-ths is for creating conflicts 
+this is conflicts
+new conflicts
